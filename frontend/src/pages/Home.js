@@ -1,9 +1,11 @@
 import React from 'react';
 import { Banner } from '../components/Banner';
+import { ScrollBar } from '../components/ScrollBar';
 
 export const Home = () => {
   return (
     <div className="h-[5000vh]">
+      <ScrollBar />
       {/* Main */}
       <main>
         <Banner />
