@@ -7,9 +7,11 @@
 :root {
   --navbar-height: 100px;
   --movil-navbar-height: 70px;
+  --scrollbar-height: 200px;
   --dark-background: #1a1b1e;
   --light-background: #f2f2f2;
-  --main-text-color: #00e600;
+  --green-color: #00e600;
+  --complement-color: #505050;
 }
 
 body {
@@ -30,11 +32,11 @@ code {
 }
 
 .text-green-custom {
-  color: var(--main-text-color);
+  color: var(--green-color);
 }
 
 .px-custom {
-  padding: 0 70px;
+  padding: 0 80px;
 }
 
 .leading-custom {
@@ -49,10 +51,42 @@ code {
   background-color: var(--light-background);
 }
 
+.bg-green-custom {
+  background-color: var(--green-color);
+}
+
+.bg-complement {
+  background-color: var(--complement-color);
+}
+
 .h-navbar-custom {
   height: var(--navbar-height);
 }
 
 .h-movil-custom {
   height: var(--movil-height);
+}
+
+/* Loader Styles */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #efde74;
+}
+
+.two {
+  left: 33.3%;
+}
+
+.three {
+  left: 66.6%;
 }
