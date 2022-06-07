@@ -3,14 +3,17 @@ import { Outlet } from 'react-router-dom';
 export const Navbar = () => {
   return (
     <>
-      <header className="w-full block">
+      <header className="w-full block fixed bg-dark-custom">
         {/* Container */}
-        <div className="flex items-center relative bg-blue-200 h-20 px-16">
+        <div className="flex items-center relative h-navbar-custom px-custom">
           {/* Logo - navbar */}
-          <div className="font-bold text-xl flex-0 bg-yellow-300">oestrada</div>
+          <div className="font-bold text-2xl flex-0">
+            <span className="text-green-custom">></span>oestrada
+            <span className="text-green-custom">_</span>
+          </div>
           {/* Navigation - navbar */}
-          <nav className="flex-1 bg-green-200">
-            <ul className="flex justify-end space-x-6">
+          <nav className="flex-1">
+            <ul className="flex justify-end space-x-10">
               <li>About</li>
               <li>Experience</li>
               <li>Work</li>
