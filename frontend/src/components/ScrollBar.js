@@ -19,7 +19,7 @@ export const ScrollBar = () => {
   }, []);
 
   return (
-    <div className="fixed flex flex-col items-center top-[calc(50%-100px)] right-[40px] space-y-16">
+    <div className="hidden md:flex flex-col fixed items-center top-[calc(50%-100px)] right-[40px] space-y-16">
       {/* Scrollbar */}
       <div className="h-[var(--scrollbar-height)] w-[2px] flex rounded-2xl bg-complement">
         <div
