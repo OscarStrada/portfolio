@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import { HiOutlineX, HiMenuAlt3 } from 'react-icons/hi';
+import { MovilMenu } from './MovilMenu';
 
 export const Navbar = () => {
+  const [isMovilMenuOpen, setIsMovilMenuOpen] = useState(false);
+
+  const toggleMenuMovil = () => {
+    setIsMovilMenuOpen(!isMovilMenuOpen);
+  };
+
   return (
     <>
       <header className="w-full block fixed bg-dark-custom">
@@ -20,6 +29,32 @@ export const Navbar = () => {
               <li>Contact</li>
             </ul>
           </nav>
+        </div>
+
+        {/* Movil menu */}
+        <div className="absolute bottom-0 right-0">
+          <div
+            className={`fixed right-6 bottom-8 flex items-center justify-center md:hidden w-[55px] h-[55px] rounded-full 
+            ${isMovilMenuOpen ? 'bg-light-custom' : 'bg-green-custom'}`}
+          >
+            {isMovilMenuOpen ? (
+              <HiOutlineX
+                className="text-dark-custom text-3xl cursor pointer"
+                onClick={toggleMenuMovil}
+              />
+            ) : (
+              <HiMenuAlt3
+                className="text-dark-custom text-3xl cursor-pointer"
+                onClick={toggleMenuMovil}
+              />
+            )}
+          </div>
+
+          <div className="fixed right-0 bottom-12">
+            {isMovilMenuOpen && (
+              <MovilMenu onClose={() => setIsMovilMenuOpen(false)} />
+            )}
+          </div>
         </div>
       </header>
       <Outlet />
