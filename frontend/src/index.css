@@ -8,8 +8,9 @@
   --navbar-height: 100px;
   --movil-navbar-height: 70px;
   --scrollbar-height: 200px;
-  --dark-background: #1a1b1e;
-  --light-background: #f2f2f2;
+
+  --dark-color: #1a1b1e;
+  --light-color: #f2f2f2;
   --green-color: #00e600;
   --complement-color: #505050;
 }
@@ -20,7 +21,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-  background-color: var(--dark-background);
+  background-color: var(--dark-color);
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,8 +36,12 @@ code {
   color: var(--green-color);
 }
 
-.px-custom {
-  padding: 0 80px;
+.text-dark-custom {
+  color: var(--dark-color);
+}
+
+.text-light-custom {
+  color: var(--light-color);
 }
 
 .leading-custom {
@@ -44,11 +49,11 @@ code {
 }
 
 .bg-dark-custom {
-  background-color: var(--dark-background);
+  background-color: var(--dark-color);
 }
 
-.bg-ligh-custom {
-  background-color: var(--light-background);
+.bg-light-custom {
+  background-color: var(--light-color);
 }
 
 .bg-green-custom {
@@ -57,6 +62,11 @@ code {
 
 .bg-complement {
   background-color: var(--complement-color);
+}
+
+.hover\:bg-complement:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(80 80 80 / var(--tw-bg-opacity));
 }
 
 .h-navbar-custom {
